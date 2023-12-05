@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+
+    --main-bg-dark-blue: hsl(217, 54%, 11%);
+    --card-bg-dark-blue: hsl(216, 50%, 16%);
+    --line-dark-blue: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+
+    --font: 'Outfit', sans-serif;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--main-bg-dark-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5em;
+}
+
+main {
+    background-color: var(--card-bg-dark-blue);
+    padding: 1.5em;
+    font-family: var(--font);
+    max-width: 350px;
+    border-radius:1em;
+}
+
+.hero-container {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1;
+}
+
+#hero-img {
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: hsl(178, 100%, 50%, 0.6);;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+#hero-img, .overlay {
+    border-radius: 0.5em;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 1.5em;
+    margin-block: 0.75em;
+}
+
+span, h1 {
+    color: var(--white);
+}
+
+h1:hover, span:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+p {
+    color: var(--soft-blue);
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block: 1.25em;
+}
+
+#icon-clock {
+    margin-left: auto;
+    margin-right: 0.5em;
+}
+
+#icon-eth {
+    margin-right: 0.5em;
+}
+
+hr {
+    height: 0.5px;
+    background-color: var(--soft-blue);
+    border: none;
+    margin-block: 1.25em;
+    opacity: 0.5;
+}
+
+#author  {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#author p {
+    margin-left: 1em;
+    font-weight: 300;
+}
+
+#avatar {
+    width: 2.5em;
+    border: 1px solid var(--white);
+    border-radius: 100%;
+}
+
